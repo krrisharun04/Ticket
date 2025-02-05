@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #fafafa;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 820px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form {
+  background-color: turquoise;
+  position: relative;
+}
+.contact-form:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: turquoise;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+form {
+  padding: 2.3rem 2.2rem;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+  font-style: bold;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  
+}
+.title1 {
+  color: black;
+  font-weight: 600;
+  font-size: 25px;
+  font-style: italic;
+  line-height: 2;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.arrow{
+  color: black;
+  font-weight: 600;
+  font-size: 25px;
+  font-style: italic;
+  line-height: 2;
+  margin-bottom: 0.7rem;
+  text-align: center;
+
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+table{
+  width: 100%;
+    outline: none;
+    border: 2px solid #fafafa;
+    background: black;
+    padding: 0.6rem 1.2rem;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: large;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    align-content: center;
+}
+
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  min-height: 150px;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: #fafafa;
+  font-size: 0.9rem;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.input-container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: #1abc9c;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: red;
+  color: #fff;
+}
+
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+  width: 50%;
+  opacity: 1;
+}
+
+.contact-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+}
+
+.contact-info .title {
+  color: #1abc9c;
+  text-align: center;
+}
+
+.square {
+  position: absolute;
+  height: 400px;
+  top: 20%;
+  left: 50%;
+  transform: translate(181%, 11%);
+  opacity: 0.2;
+}
+@media (max-width: 480px) {
+  .square,
+  .big-circle {
+    display: none;
+  }
+  .title {
+    font-size: 1.15rem;
+  }
+  .btn {
+    padding: 0.45rem 1.2rem;
+  }
+}

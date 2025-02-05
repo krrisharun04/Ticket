@@ -1,0 +1,168 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    background-color: rgba(151,151,151,0.03);
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style:none
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border:1px solid rgba(0,0,0,0.04);
+    background-color: #ffffff;
+}
+.logo img{
+    height: 45px;
+}
+nav .menu{
+    display: flex;
+}
+nav .menu li a{
+    height: 40px;
+    line-height: 43px;
+    margin: 0px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #585858;
+    letter-spacing: 1px;
+}
+.search{
+    width:250px;
+    height:40px;
+    background-color: rgba(245,245,245,0.8);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+.search input{
+    width:100%;
+    height:30px;
+    border:none;
+    outline:none;
+    background-color: transparent;
+}
+.search i{
+    color: black;
+}
+nav .menu li a:hover{
+    background-color: #242424;
+    color:#ffffff;
+    box-shadow: 5px 10px 30px rgba(53,53,53,0.1);
+    transition: all ease 0.2s;
+}
+/*-------------slider cover photo------------------*/
+
+.slider{
+	position: relative;
+	width: 100%;
+	background: black; /*  ----> index page background color ------------------*/ 
+}
+.myslide{
+	height: 655px;
+	display: none;
+	overflow: hidden;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 20%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: white;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: red;
+}
+.next{
+	right: 0;
+}
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+/*----------movie list----*******(POPULAR MOVIR)---------------------*/
+
+.movie-heading{
+    display:flex;
+    margin:0px 2%;
+}
+.movie-box{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-top: 3px solid #292929;
+	background-color:white;
+}
+.movie-img{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.movie-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.movie-box a{
+    text-align: center;
+    display: block;
+    font-weight:bolder;
+	text-transform:uppercase;
+    display: -webkit-box;
+    max-width: 80%;
+    -webkit-line-clamp: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:red;
+    margin: 20px;
+}
+.movie-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.2s;
+}
+#movie-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

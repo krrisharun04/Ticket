@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="{% static 'mstyle.css' %}"/>
+    
+</head>
+<body>
+    <div class="header">
+        <!--
+        <nav>
+            <a href="" class="logo">isi</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+
+        </nav>-->
+        <div class="left-sidebar"></div>
+
+        <div class="row">
+            {% for i in moviedetails %}
+            <div class="left-col">
+                <img src="{{i.img.url}}" height="550px" width="180px">
+                <!--div class="buttons">
+                    <button>Watch Trailer</button>
+                </div-->
+            </div>
+            <div class="right-col">
+                <h1 style="color:turquoise">{{i.mname}}</h1>
+                <br>
+                <hr size="" width="" color="white">
+                <br>
+                <h3 style="color: yellow;">Movie Description :</h3>
+                <br>
+                <p>{{i.description}}</p>
+                <br>
+
+                    <table style="width:70%">
+                        <tr>
+                            <td><h3>Language</h3></td>
+                            <td><h3>{{i.language}}</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Duration</h3></td>
+                            <td><h3>{{i.duration}}</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Movie</h3></td>
+                            <td><h3>{{i.movie_Type}}</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Release Date</h3></td>
+                            <td><h3>{{i.Release_date}}</h3></td>
+                        </tr>
+                        <tr>
+                          <td><h3>Ticket_Price</h3></td>
+                          <td><h3>{{i.ticket_price}}</h3></td>
+                        </tr>
+                        <tr>
+                          <td><h3>Trailer Link</h3></td>
+                          <td><h3><a href="{{i.Trailer_link}}">Watch</a></h3></td>
+                        </tr>
+                    </table>
+                
+                <div class="social-media">
+                    <!--div class="icon">
+                        <img src="cv_header_img/facebook.png">
+                        <a href="https://facebook.com">
+                            <img src="cv_header_img/link.png">
+                        </a>
+                    </div--->
+                    <div class="buttons">
+                        <a href="seat/{{i.mname}}"><button>BOOK NOW!</button></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}   
+        </div>
+    </div>
+    
+</body>
+</html>

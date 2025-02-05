@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'print.css' %}">
+        <title>Receipt example</title>
+    </head>
+    <body>
+        {% for i in moviedetails %}
+        <div class="ticket">
+            <img src="{% static 'images/logo6.png' %}" alt="Logo">
+            <p class="centered"><h1 align="center">RAM CINEMAS</h1>
+            </p>
+            <p class="centered">
+                onlineticketsnew@gmail.com
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th class="description">Movie Name</th>
+                        <th class="price">Price</th>
+                        <th class="quantity">Seats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="description">{{i.mname}}</td>
+                        <td class="price">RS {{i.ticket_price}}</td>
+                        <td class="quantity"><span id="count"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="quantity"></td>
+                        <td class="description">TOTAL</td>
+                        <td class="price"><span id="total"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <table align="center">
+                    <tr>
+                        <td>SHOW TIME :</td>
+                        <td><span id="time"></span></td>
+                    </tr>
+                </table>
+
+            </p>
+
+            <p class="centered">Thanks for your Booking!
+                <br>MovieTicketBooking.com</p>
+        </div>
+        <button id="btnPrint" class="hidden-print">Print</button>
+        {% endfor %}
+        <script src="{% static 'print/script.js' %}"></script>
+    </body>
+</html>
